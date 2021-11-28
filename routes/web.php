@@ -18,5 +18,8 @@ use App\Http\Controllers\PesertaController;
 //     return view('welcome');
 // });
 
-route::get('/', [SiswaController::class, 'index'] );
+route::get('/', [SiswaController::class, 'index'])->name('index_siswa');
+route::get('/tambah_siswa', [SiswaController::class, 'add_siswa'])->name('tambah_siswa');
+
 route::get('/peserta', [PesertaController::class, 'index'])->name('peserta');
+
