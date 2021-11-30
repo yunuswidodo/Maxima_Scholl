@@ -33,16 +33,19 @@
                           <th>Action</th>
                         </tr>
                       </thead>
+                      
                       <tbody>
-                          <td>1</td>
-                          <td>20211128</td>
-                          <td>yunus</td>
-                          <td>Surabaya</td>
+                    
+                      @foreach($data as $data)
+                          <td>{{$loop->iteration}}</td>
+                          <td>{{$data->NIS}}</td>
+                          <td>{{$data->Nama}}</td>
+                          <td>{{$data->Alamat}}</td>
                           <td><button type="button" class="btn-sm btn-warning ti-pencil-alt btn-rounded"> edit</button>
                               <button type="button" class="btn-sm btn-danger ti-eraser btn-rounded"> edit</button>
-                          </td
-                        </tr>
+                          </td>
                       </tbody>
+                      @endforeach
                     </table>
                   </div>
                 </div>
