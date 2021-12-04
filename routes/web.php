@@ -21,6 +21,7 @@ use App\Http\Controllers\PesertaController;
 route::get('/', [SiswaController::class, 'index'])->name('index_siswa');
 route::get('/tambah_siswa', [SiswaController::class, 'add_siswa'])->name('tambah_siswa');
 route::post('/store', [SiswaController::class, 'store']);
+route::get('/edit_siswa/{id}', [SiswaController::class, 'edit_siswa'])->name('edit_siswa');
 
 route::get('/peserta', [PesertaController::class, 'index'])->name('peserta');
 

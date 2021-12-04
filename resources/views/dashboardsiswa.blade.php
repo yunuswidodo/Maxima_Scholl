@@ -1,5 +1,4 @@
 @extends('master.master')
-
 @section('content')
 
         <div class="content-wrapper">
@@ -21,7 +20,6 @@
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title mb-0">Top Products</p>
                   <div class="table-responsive">
                     <table class="table table-hover">
                       <thead>
@@ -33,15 +31,13 @@
                           <th>Action</th>
                         </tr>
                       </thead>
-                      
-                      <tbody>
-                    
+                      <tbody>    
                       @foreach($data as $data)
                           <td>{{$loop->iteration}}</td>
                           <td>{{$data->NIS}}</td>
                           <td>{{$data->Nama}}</td>
                           <td>{{$data->Alamat}}</td>
-                          <td><button type="button" class="btn-sm btn-warning ti-pencil-alt btn-rounded"> edit</button>
+                          <td>  <a href="{{route('edit_siswa', [$data->id])}}"><button type="button" class="btn-sm btn-warning ti-pencil-alt btn-rounded"> edit</button></a>
                               <button type="button" class="btn-sm btn-danger ti-eraser btn-rounded"> edit</button>
                           </td>
                       </tbody>

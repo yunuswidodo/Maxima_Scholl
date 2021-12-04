@@ -8,7 +8,7 @@ use App\Models\Siswa;
 class SiswaController extends Controller
 {
     public function index(){
-        $data = Siswa::all();
+        $data = Siswa::all(); 
         return view('dashboardsiswa', ['data' =>$data]);
     }
 
@@ -18,7 +18,6 @@ class SiswaController extends Controller
 
     public function store(Request $request){
         $data  = new Siswa;
-
         $data->NIS = $request->nis;
         $data->Nama = $request->nama;
         $data->Alamat = $request->alamat;
@@ -26,5 +25,11 @@ class SiswaController extends Controller
         return redirect()->back();
     }
 
-    
+
+
+    public function edit_siswa($id){
+        $data = siswa::find($id);
+
+        return view ('siswa.editsiswa', ['data' => $data]);
+    }
 }
