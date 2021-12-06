@@ -4,7 +4,8 @@
   <div class="card">
     <div class="card-body">
       <h4 class="card-title">Keterangan siswa</h4>
-      <form class="forms-sample" method="POST" action="store">
+      <form class="forms-sample" method="POST" action="{{route('update_siswa', [$data->id])}}">
+        @method('PUT')
         @csrf
         <div class="form-group">
           <label for="nis">NIS</label>

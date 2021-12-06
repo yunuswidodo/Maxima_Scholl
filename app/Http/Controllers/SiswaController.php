@@ -26,10 +26,21 @@ class SiswaController extends Controller
         return redirect()->route('index_siswa');;
     }
 
-
-
     public function edit_siswa($id){
         $data = siswa::find($id);
         return view ('siswa.editsiswa', ['data' => $data]);
     }
+
+    public function update_siswa(Request $request, $id){
+        $data = siswa::find($id);
+        $data->NIS = $request->nis;
+        $data->Nama = $request->nama;
+        $data->Alamat = $request->alamat;
+        $data->save() ;
+        return redirect()->route('index_siswa');        
+    }
+
+    
+
+
 }
