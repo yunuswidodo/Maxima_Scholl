@@ -9,11 +9,12 @@ class SiswaController extends Controller
 {
     public function index(){
         $data = Siswa::all(); 
-        return view('dashboardsiswa', ['data' =>$data]);
+        return view('siswa.dashboardsiswa', ['data' =>$data]);
     }
 
     public function add_siswa() {
-        return view('tambahsiswa');
+        return view('siswa.tambahsiswa');
+        
     }
 
     public function store(Request $request){
@@ -22,14 +23,13 @@ class SiswaController extends Controller
         $data->Nama = $request->nama;
         $data->Alamat = $request->alamat;
         $data->save();
-        return redirect()->back();
+        return redirect()->route('index_siswa');;
     }
 
 
 
     public function edit_siswa($id){
         $data = siswa::find($id);
-
         return view ('siswa.editsiswa', ['data' => $data]);
     }
 }

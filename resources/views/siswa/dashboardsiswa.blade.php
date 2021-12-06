@@ -38,7 +38,7 @@
                           <td>{{$data->Nama}}</td>
                           <td>{{$data->Alamat}}</td>
                           <td>  <a href="{{route('edit_siswa', [$data->id])}}"><button type="button" class="btn-sm btn-warning ti-pencil-alt btn-rounded"> edit</button></a>
-                              <button type="button" class="btn-sm btn-danger ti-eraser btn-rounded"> edit</button>
+                              <button type="button" class="btn-sm btn-danger ti-eraser btn-rounded"> delete</button>
                           </td>
                       </tbody>
                       @endforeach
