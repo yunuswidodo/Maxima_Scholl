@@ -23,6 +23,6 @@ route::get('/tambah_siswa', [SiswaController::class, 'add_siswa'])->name('tambah
 route::post('/store', [SiswaController::class, 'store']);
 route::get('/edit_siswa/{id}', [SiswaController::class, 'edit_siswa'])->name('edit_siswa');
 route::put('/update_siswa/{id}', [SiswaController::class, 'update_siswa'])->name('update_siswa');
-
+route::get('/delete_siswa/{id}', [SiswaController::class, 'delete_siswa'])->name('delete_siswa');
 route::get('/peserta', [PesertaController::class, 'index'])->name('peserta');
 

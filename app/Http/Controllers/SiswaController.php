@@ -13,8 +13,7 @@ class SiswaController extends Controller
     }
 
     public function add_siswa() {
-        return view('siswa.tambahsiswa');
-        
+        return view('siswa.tambahsiswa');     
     }
 
     public function store(Request $request){
@@ -38,6 +37,13 @@ class SiswaController extends Controller
         $data->Alamat = $request->alamat;
         $data->save() ;
         return redirect()->route('index_siswa');        
+    }
+
+    public function delete_siswa($id){
+        $data = siswa::find($id);
+        $data->delete();
+        return redirect()->route('index_siswa');
+
     }
 
     
