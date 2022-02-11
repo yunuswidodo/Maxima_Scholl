@@ -3,19 +3,19 @@
         <li class="nav-item">
             <a class="nav-link" href="{{route('index_siswa')}}">
               <i class="ti-view-list-alt menu-icon"></i>
-              <span class="menu-title">Tables</span>
+              <span class="menu-title">siswa</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('peserta')}}">
               <i class="ti-view-list-alt menu-icon"></i>
-              <span class="menu-title">Tables</span>
+              <span class="menu-title">peserta</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+            <a class="nav-link" href="{{route('index_matapelajaran')}}">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title">User Pages</span>
+              <span class="menu-title">Mata Peljaran</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">

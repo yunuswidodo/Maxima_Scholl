@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Siswa;
+// use RealRashid\SweetAlert\Facades\Alert;
+
 
 class SiswaController extends Controller
 {
@@ -22,12 +24,15 @@ class SiswaController extends Controller
         $data->Nama = $request->nama;
         $data->Alamat = $request->alamat;
         $data->save();
+
         return redirect()->route('index_siswa');;
     }
 
     public function edit_siswa($id){
         $data = siswa::find($id);
         return view ('siswa.editsiswa', ['data' => $data]);
+        
+        
     }
 
     public function update_siswa(Request $request, $id){
@@ -36,7 +41,9 @@ class SiswaController extends Controller
         $data->Nama = $request->nama;
         $data->Alamat = $request->alamat;
         $data->save() ;
-        return redirect()->route('index_siswa');        
+        return redirect()->route('index_siswa')->withSuccess('Siswa Success Update');        
+       
+
     }
 
     public function delete_siswa($id){

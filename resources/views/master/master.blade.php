@@ -1,6 +1,7 @@
+<!-- sweet alert -->
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -158,6 +159,7 @@
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_sidebar.html -->
+      @include('sweetalert::alert')
       @include('master.sidebar')
       <!-- partial -->
       <div class="main-panel">

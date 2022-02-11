@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\PesertaController;
+use App\Http\Controllers\MataPelajaranController;
+//use RealRashid\SweetAlert\Facades\Alert;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,4 +27,4 @@ route::get('/edit_siswa/{id}', [SiswaController::class, 'edit_siswa'])->name('ed
 route::put('/update_siswa/{id}', [SiswaController::class, 'update_siswa'])->name('update_siswa');
 route::get('/delete_siswa/{id}', [SiswaController::class, 'delete_siswa'])->name('delete_siswa');
 route::get('/peserta', [PesertaController::class, 'index'])->name('peserta');
-
+route::get('/matapelajaran', [MataPelajaranController::class, 'index'])->name('index_matapelajaran');

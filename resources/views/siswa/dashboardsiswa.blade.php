@@ -1,6 +1,5 @@
 @extends('master.master')
 @section('content')
-
         <div class="content-wrapper">
           <div class="row">
             <div class="col-md-12 grid-margin">
@@ -38,7 +37,7 @@
                           <td>{{$data->Nama}}</td>
                           <td>{{$data->Alamat}}</td>
                           <td>  <a href="{{route('edit_siswa', [$data->id])}}"><button type="button" class="btn-sm btn-warning ti-pencil-alt btn-rounded"> edit</button></a>
-                                <a href="{{route('delete_siswa', [$data->id])}}"><button type="button" class="btn-sm btn-danger ti-eraser btn-rounded"> delete</button></a>
+                                <a href="{{route('delete_siswa', [$data->id])}}"><button type="button" name="deletebuttonssss" class="btn-sm btn-danger ti-eraser btn-rounded"> delete</button></a>
                           </td>
                       </tbody>
                       @endforeach
@@ -49,4 +48,11 @@
             </div>
           </div>
         </div>
+       
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+        $( "#target" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+</script>
 @endsection
