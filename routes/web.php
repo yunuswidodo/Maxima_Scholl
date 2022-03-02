@@ -28,3 +28,5 @@ route::put('/update_siswa/{id}', [SiswaController::class, 'update_siswa'])->name
 route::get('/delete_siswa/{id}', [SiswaController::class, 'delete_siswa'])->name('delete_siswa');
 route::get('/peserta', [PesertaController::class, 'index'])->name('peserta');
 route::get('/matapelajaran', [MataPelajaranController::class, 'index'])->name('index_matapelajaran');
+route::get('/tambah_matapelajaran', [MataPelajaranController::class, 'add_pelajaran'])->name('tambah_matapelajaran');
+route::post('store', [MataPelajaranController::class, 'store']);

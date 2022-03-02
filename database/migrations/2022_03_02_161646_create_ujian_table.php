@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMataPelajaranTable extends Migration
+class CreateUjianTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateMataPelajaranTable extends Migration
      */
     public function up()
     {
-        Schema::create('mata_pelajaran', function (Blueprint $table) {
-            $table->integer('ID_MAPEL')->autoIncrement();
-            $table->string('Nama_Mapel');
+        Schema::create('ujian', function (Blueprint $table) {
+            $table->integer('ID_UJIAN')->autoIncrement();
+            $table->String('NAMA_UJIAN', 50);
+            $table->integer('ID_MAPEL');
+            $table->datetime('TANGGAL');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateMataPelajaranTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mata_pelajaran');
+        Schema::dropIfExists('ujian');
     }
 }
