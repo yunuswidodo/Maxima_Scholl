@@ -26,7 +26,11 @@ route::post('/store', [SiswaController::class, 'store']);
 route::get('/edit_siswa/{id}', [SiswaController::class, 'edit_siswa'])->name('edit_siswa');
 route::put('/update_siswa/{id}', [SiswaController::class, 'update_siswa'])->name('update_siswa');
 route::get('/delete_siswa/{id}', [SiswaController::class, 'delete_siswa'])->name('delete_siswa');
+
 route::get('/peserta', [PesertaController::class, 'index'])->name('peserta');
+
+// route for matamatapelajaran
 route::get('/matapelajaran', [MataPelajaranController::class, 'index'])->name('index_matapelajaran');
 route::get('/tambah_matapelajaran', [MataPelajaranController::class, 'add_pelajaran'])->name('tambah_matapelajaran');
 route::post('store', [MataPelajaranController::class, 'store']);
+route::get('/edit_matapelajaran', [MataPelajaranController::class, 'edit_matapelajaran'])->name('edit_matapelajaran');
