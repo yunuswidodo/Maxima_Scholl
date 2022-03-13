@@ -4,7 +4,8 @@
   <div class="card">
     <div class="card-body">
       <h4 class="card-title">Masukan Matapelajaran</h4>
-      <form class="forms-sample" method="POST" action="store">
+      <form class="forms-sample" method="POST" action="{{route('update_matapelajaran', [$data->ID_MAPEL])}}">
+        @method('PUT')
         @csrf
         <div class="form-group">
           <label for="nis">Matapelajaran</label>

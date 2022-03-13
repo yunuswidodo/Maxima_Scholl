@@ -13,21 +13,41 @@ class MataPelajaranController extends Controller
     return view('matapelajaran.matapelajaran_index',['data'=>$data]);
   }
 
-  public function add_pelajaran(){
+  public function add_pelajaran()
+  {
     return view('matapelajaran.matapelajaran_tambah');
   }
 
-  public function store(Request $request){
+  public function store(Request $request)
+  {
    $data = new Matapelajaran;
    $data->Nama_Mapel = $request->matapelajaran;
    $data->save();
    return redirect()->route('index_matapelajaran');
   }
 
-  public function edit_matapelajaran($id){
+  public function edit_matapelajaran($id)
+  {
     $data = Matapelajaran::find($id);
     return view ('matapelajaran.matapelajaran_edit', ['data' => $data]);
   }
 
+  public function update_matapelajaran(Request $request, $id) 
+  {
+    $data = Matapelajaran::find($id); 
+    $data->Nama_Mapel = $request->matapelajaran;
+    $data->save();
+    return redirect()->route('index_matapelajaran');      
+  }
+
+  public function delete_matapelajaran($id) 
+  {
+    $data = Matapelajaran::find($id);
+    $data->delete();
+    return redirect()->route('index_matapelajaran');
+  }
 
 }
+
+
+

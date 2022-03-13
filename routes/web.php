@@ -34,3 +34,5 @@ route::get('/matapelajaran', [MataPelajaranController::class, 'index'])->name('i
 route::get('/tambah_matapelajaran', [MataPelajaranController::class, 'add_pelajaran'])->name('tambah_matapelajaran');
 route::post('store', [MataPelajaranController::class, 'store']);
 route::get('/edit_matapelajaran/{id}', [MataPelajaranController::class, 'edit_matapelajaran'])->name('edit_matapelajaran');
+route::put('/update_matapelajaran/{id}', [MataPelajaranController::class, 'update_matapelajaran'])->name('update_matapelajaran');
+route::get('/delete_matapelajaran/{id}', [MataPelajaranController::class, 'delete_matapelajaran'])->name('delete_matapelajaran');

@@ -26,8 +26,10 @@
               <a href="{{route('edit_matapelajaran', [$data->ID_MAPEL])}}"><button type="button" class="btn btn-warning btn-rounded btn-icon mr-n5">
                 <i class="ti-wand"></i>
               </button> </a>
+              <a href="{{route('delete_matapelajaran', [$data->ID_MAPEL])}}">
                 <button type="button" class="btn btn-danger btn-rounded btn-icon ml-n3">
                 <i class="ti-trash"></i>
+              </a>
               </button>
             </div>  
           </div>
