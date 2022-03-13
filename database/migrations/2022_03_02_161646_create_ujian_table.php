@@ -16,7 +16,7 @@ class CreateUjianTable extends Migration
         Schema::create('ujian', function (Blueprint $table) {
             $table->integer('ID_UJIAN')->autoIncrement();
             $table->String('NAMA_UJIAN', 50);
-            $table->integer('ID_MAPEL');
+            $table->integer('ID_MAPEL'); // ambil dari matapelajaran
             $table->datetime('TANGGAL');
             $table->timestamps();
         });

@@ -29,9 +29,9 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="documentation/documentation.html">
+            <a class="nav-link" href="{{route('index_ujian')}}">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title">Documentation</span>
+              <span class="menu-title">Ujian</span>
             </a>
           </li>
         </ul>
