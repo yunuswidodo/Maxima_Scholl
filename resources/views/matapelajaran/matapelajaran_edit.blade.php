@@ -8,7 +8,7 @@
         @csrf
         <div class="form-group">
           <label for="nis">Matapelajaran</label>
-          <input type="text" class="form-control" name="matapelajaran" id="matapelajaran" placeholder="masukan matapelajaran">
+          <input type="text" class="form-control" name="matapelajaran" id="matapelajaran" value="{{$data->Nama_Mapel}}">
         </div>
         <button type="submit" class="btn btn-primary mr-2">Submit</button>
         <button class="btn btn-light">Cancel</button>

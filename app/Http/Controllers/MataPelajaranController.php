@@ -24,8 +24,9 @@ class MataPelajaranController extends Controller
    return redirect()->route('index_matapelajaran');
   }
 
-  public function edit_matapelajaran(){
-    return view ('matapelajaran.matapelajaran_edit');
+  public function edit_matapelajaran($id){
+    $data = Matapelajaran::find($id);
+    return view ('matapelajaran.matapelajaran_edit', ['data' => $data]);
   }
 
 

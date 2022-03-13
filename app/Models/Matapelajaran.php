@@ -10,5 +10,7 @@ class Matapelajaran extends Model
     use HasFactory;
 
     protected $table = 'mata_pelajaran';
+    protected $primaryKey = 'ID_MAPEL'; //  for set primary key
+   
 
 }

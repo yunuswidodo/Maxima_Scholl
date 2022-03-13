@@ -1,0 +1,2 @@
+['data' => $data]  // varabele $data dimasukan dalam 'data' yang dimana nanti digunakan pada view;
+protected $primaryKey = 'ID_MAPEL'; // untuk mengsetting primaryKey supaya tidak default ke id
