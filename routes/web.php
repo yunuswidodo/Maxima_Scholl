@@ -40,6 +40,7 @@ route::get('/delete_matapelajaran/{id}', [MataPelajaranController::class, 'delet
 
 // route  ujian 
 route::get('/ujian', [UjianController::class, 'index'])->name('index_ujian');
+route::get('/tambah_ujian', [UjianController::class, 'add_ujian'])->name('tambah_ujian');
 
 // route peserta
 route::get('/peserta', [PesertaController::class, 'index'])->name('peserta');

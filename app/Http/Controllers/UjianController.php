@@ -11,5 +11,11 @@ class UjianController extends Controller
     {
         $data = Ujian::all(); 
         return view('ujian.index_ujian', ['data' =>$data]);
-    }   
+    }
+    
+    public function add_ujian()
+    {
+        return view('ujian.tambah_ujian');
+    }
+    
 }
